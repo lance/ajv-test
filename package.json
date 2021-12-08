@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "build": "ajv compile -c ./schema/formats.js -s ./schema/schema.json -o | prettier --parser typescript > ./schema/validate.js",
+    "build": "ajv compile -c ./schema/formats.js -s ./schema/schema.json -o | prettier --parser typescript > ./validate.js",
+    "prestart": "npm run build",
     "start": "node app.js"
   },
   "author": "Lance Ball <lball@redhat.com>",

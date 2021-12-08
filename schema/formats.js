@@ -9,7 +9,6 @@ function enableFormats(ajv) {
   // Date().toString(), which is not spec compliant date-time format
   ajv.addFormat("js-date-time", function formatJSDate(dateTimeString) {
     const date = new Date(Date.parse(dateTimeString));
-    console.error(`DTTETE ${date}`)
     return date.toString() !== "Invalid Date";
   });
 }
