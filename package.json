@@ -1,0 +1,16 @@
+{
+  "name": "ajv-test",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "ajv compile -c ./schema/formats.js -s ./schema/schema.json -o | prettier --parser typescript > ./schema/validate.js",
+    "start": "node app.js"
+  },
+  "author": "Lance Ball <lball@redhat.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "ajv": "^8.8.2",
+    "ajv-formats": "^2.1.1",
+    "prettier": "^2.5.1"
+  }
+}

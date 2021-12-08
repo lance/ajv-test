@@ -1,0 +1,19 @@
+{
+  "$ref": "#/definitions/event",
+  "definitions": {
+    "event": {
+      "properties": {
+        "time": {
+          "$ref": "#/definitions/time"
+        }
+      },
+      "type": "object"
+    },
+    "time": {
+      "format": "js-date-time",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
+
